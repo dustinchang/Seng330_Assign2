@@ -6,8 +6,8 @@
 //  Copyright © 2015 Dustin. All rights reserved.
 //
 
-#ifndef base_hpp
-#define base_hpp
+#ifndef Base_hpp
+#define Base_hpp
 
 #include <stdio.h>
 
@@ -18,4 +18,4 @@ class Base {
         ~Base();
 };
 
-#endif /* base_hpp */
+#endif /* Base_hpp */

@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <string>
+#include "Base.hpp"
+#include "Child1.hpp"
 
 using namespace std;
 

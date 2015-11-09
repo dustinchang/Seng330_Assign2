@@ -6,13 +6,16 @@
 //  Copyright © 2015 Dustin. All rights reserved.
 //
 
-#include "base.hpp"
 #include <iostream>
+#include "Base.hpp"
+#include "Child1.hpp"
+
+using namespace std;
 
 Base::Base() {
-    std::cout << "In the Base Constructor\n";
+    cout << "In the Base Constructor\n";
 }
 
 Base::~Base() {
-    std::cout << "In the Base Deconstructor\n";
+    cout << "In the Base Deconstructor\n";
 }
