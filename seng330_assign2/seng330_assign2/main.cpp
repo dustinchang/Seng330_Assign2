@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
     //Eventually create a func for this if-else
     if (s=="base") {
         Base b;
+        cout << &b << endl;
     } else if (s=="child1") {
         Child1 c1;
     } else if (s=="child2") {

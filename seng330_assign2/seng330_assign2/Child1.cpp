@@ -17,6 +17,6 @@ Child1::Child1() {
 }
 
 Child1::~Child1() {
-    cout << "In the Child1 Destructor\n";
+    cout << "In the Child1 ~Destructor\n";
 }
 

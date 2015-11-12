@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "Base.hpp"
-#include "Child1.hpp"
+//#include "Child1.hpp"
 
 using namespace std;
 
@@ -17,5 +17,5 @@ Base::Base() {
 }
 
 Base::~Base() {
-    cout << "In the Base Deconstructor\n";
+    cout << "In the Base ~Deconstructor\n";
 }
