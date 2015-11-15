@@ -1,0 +1,9 @@
+#Tools needed to build project
+  XCode (Tested on version 6 or above, may work on older versions)
+  Git
+
+#Instructions to build project
+  Download or clone repository files from GitHub https://github.com/dustinchang/Seng330_Assign2
+  In the assign2_prototype directory, open the assign2_prototype.xcodeproj file
+  Then in XCode navigate to Product->Build or Command-B to build the project
+  Then navigate to Product->Run or Command-R to run the project
