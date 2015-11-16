@@ -23,9 +23,9 @@ class Base {
          */
         string cname;
     public:
-      /*!
-       * Template for clone
-       */
+        /*!
+         * Template for clone
+         */
         virtual Base* clone() = 0;
         /*!
          * Getter method for cname
@@ -33,6 +33,12 @@ class Base {
         string getCName() {
             return cname;
         }
+        /*!
+         * Virtual Destructor function for Prototype Template
+         */
+         virtual ~Base() {
+           cout << "Base destructor called\n";
+         }
 };
 
 /*!
@@ -165,6 +171,9 @@ int main(int argc, const char * argv[]) {
             break;
         }
     }
+    
+    //Reason for no destructor before was overwriting each time, which could memory leak, FIX
+    delete obj;
     cout << "END~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
     return 0;
 }
