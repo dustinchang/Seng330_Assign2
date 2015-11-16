@@ -1,49 +1,87 @@
-//
-//  main.cpp
-//  assign2_prototype
-//
-//  Created by Dustin on 2015-11-11.
-//  Copyright © 2015 Dustin. All rights reserved.
-//
+/// \mainpage
+///  main.cpp
+///  assign2_prototype
+///
+///  Created by Dustin on 2015-11-11.
+///  Copyright © 2015 Dustin. All rights reserved.
+///
 
 #include <iostream>
 #include <string>
+//#include "invest.ph.h"
 
 using namespace std;
 
+
+/*!
+ * This is the Base Prototype class that will be the template for other classes
+ */
 class Base {
     protected:
+        /*!
+         * Protected string cname
+         */
         string cname;
     public:
+      /*!
+       * Template for clone
+       */
         virtual Base* clone() = 0;
+        /*!
+         * Getter method for cname
+         */
         string getCName() {
             return cname;
         }
 };
 
+/*!
+ * This is the Stock Prototype class that will be the template to be cloned for a stock
+ */
 class BaseChild1 : public Base {
     public:
+        /*!
+         * Constructor for BaseChild1 with string value
+         */
         BaseChild1(string str) {
             cname = str;
         }
+        /*!
+         * Clone function for BaseChild1
+         */
         Base* clone() {
             cout << "in BaseChild1 clone\n";
             return new BaseChild1(*this);
         }
+        /*!
+         * Destructor function for BaseChild1
+         */
         ~BaseChild1() {
             cout << "In the BaseChild1 ~Destructor\n";
         }
 };
 
+/*!
+ * This is the MutualFund Prototype class that will be the template to be cloned for a MutualFund
+ */
 class BaseChild2 : public Base {
     public:
+        /*!
+         * Constructor for BaseChild2 with string value
+         */
         BaseChild2(string str) {
             cname = str;
         }
+        /*!
+         * Clone function for BaseChild2
+         */
         Base* clone() {
             cout << "in BaseChild2 clone\n";
             return new BaseChild2(*this);
         }
+        /*!
+         * Destructor function for BaseChild2
+         */
         ~BaseChild2() {
             cout << "In the BaseChild2 ~Destructor\n";
         }
@@ -51,6 +89,9 @@ class BaseChild2 : public Base {
 
 //Factory to assist prototype instances and create their clones
 class ObjFactory {
+  /*!
+   * Static prototype template classes
+   */
     static Base* child1;
     static Base* child2;
     public:
@@ -70,13 +111,20 @@ Base* ObjFactory::child1 = 0;
 Base* ObjFactory::child2 = 0;
 
 int main(int argc, const char * argv[]) {
+    //GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+    //invest::Invest investing;
+
+    //investing.ParseFromIstream();
+
+
     ObjFactory::init();
     Base* obj;
     string s;
-    
+
     cout << "Enter object you want to (BaseChild1 || BaseChild2)\n";
     cin >> s;
-    
+
     //Eventually create a func for this if-else
     if (s=="BaseChild1") {
         obj = ObjFactory::getNameVal1();
@@ -85,7 +133,7 @@ int main(int argc, const char * argv[]) {
         obj = ObjFactory::getNameVal2();
         cout << obj->getCName() << endl;
     }
-    
+
     //Loop for prompting user for a string for the type and the instance name
     while (s == "BaseChild1" || s == "BaseChild2") {
         cout << "Enter class you want to build (Basechild1, BaseChild2)\n";
@@ -96,7 +144,10 @@ int main(int argc, const char * argv[]) {
         } else if (s=="BaseChild2") {
             obj = ObjFactory::getNameVal2();
             cout << obj->getCName() << endl;
+        } else {
+            break;
         }
     }
+    cout << "END~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
     return 0;
 }

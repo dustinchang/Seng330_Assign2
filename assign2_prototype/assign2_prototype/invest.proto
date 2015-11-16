@@ -1,0 +1,9 @@
+package invest;
+
+message Stock {
+  optional string sname = 1;
+}
+
+message MutualFund {
+  optional string fname = 1;
+}
