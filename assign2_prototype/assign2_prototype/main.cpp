@@ -89,19 +89,28 @@ class BaseChild2 : public Base {
 
 //Factory to assist prototype instances and create their clones
 class ObjFactory {
-  /*!
-   * Static prototype template classes
-   */
+    /*!
+     * Static prototype template classes
+     */
     static Base* child1;
     static Base* child2;
     public:
+        /*!
+         * Initialization function of derived classes
+         */
         static void init() {
             child1 = new BaseChild1("BaseChild1");
             child2 = new BaseChild2("BaseChild2");
         }
+        /*!
+         * Function to clone derived class 1
+         */
         static Base* getNameVal1() {
             return child1->clone();
         }
+        /*!
+         * Function to clone derived class 2
+         */
         static Base* getNameVal2() {
             return child2->clone();
         }
@@ -110,6 +119,10 @@ class ObjFactory {
 Base* ObjFactory::child1 = 0;
 Base* ObjFactory::child2 = 0;
 
+/*!
+ * Main function for execution of creating classes and producing objects from user interaction.
+ * There is a Base class that acts as a template and two derived classes Stock and MutualFund.
+ */
 int main(int argc, const char * argv[]) {
     //GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -117,7 +130,9 @@ int main(int argc, const char * argv[]) {
 
     //investing.ParseFromIstream();
 
-
+    /*!
+     * Initialization of Objects and variables
+     */
     ObjFactory::init();
     Base* obj;
     string s;
@@ -134,7 +149,9 @@ int main(int argc, const char * argv[]) {
         cout << obj->getCName() << endl;
     }
 
+    //
     //Loop for prompting user for a string for the type and the instance name
+    //
     while (s == "BaseChild1" || s == "BaseChild2") {
         cout << "Enter class you want to build (Basechild1, BaseChild2)\n";
         cin >> s;
