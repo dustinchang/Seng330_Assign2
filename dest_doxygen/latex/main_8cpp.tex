@@ -1,20 +1,24 @@
-\hypertarget{main_8cpp}{}\section{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/assign2\+\_\+prototype/assign2\+\_\+prototype/main.cpp File Reference}
-\label{main_8cpp}\index{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/assign2\+\_\+prototype/assign2\+\_\+prototype/main.\+cpp@{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/assign2\+\_\+prototype/assign2\+\_\+prototype/main.\+cpp}}
+\hypertarget{main_8cpp}{}\section{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/src/main.cpp File Reference}
+\label{main_8cpp}\index{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/src/main.\+cpp@{/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/src/main.\+cpp}}
 {\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}invest.\+pb.\+h\char`\"{}}\\*
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_base}{Base}
+class \hyperlink{class_index}{Index}
 \item 
-class \hyperlink{class_base_child1}{Base\+Child1}
+class \hyperlink{class_stock}{Stock}
 \item 
-class \hyperlink{class_base_child2}{Base\+Child2}
+class \hyperlink{class_mutual_fund}{Mutual\+Fund}
 \item 
 class \hyperlink{class_obj_factory}{Obj\+Factory}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_abcb39532eadae7f368d10cdba03ad485}{Prompt\+For\+Investment} (\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} $\ast$investment)
 \item 
 int \hyperlink{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
@@ -29,4 +33,11 @@ int \hyperlink{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, con
 \item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
 )}\label{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}
-Main function for execution of creating classes and producing objects from user interaction. There is a \hyperlink{class_base}{Base} class that acts as a template and two derived classes Stock and Mutual\+Fund. Initialization of Objects and variables
+Main function for execution of creating classes and producing objects from user interaction. There is a \hyperlink{class_index}{Index} class that acts as a template and two derived classes \hyperlink{class_stock}{Stock} and \hyperlink{class_mutual_fund}{Mutual\+Fund}. Initialization of Objects and variables\hypertarget{main_8cpp_abcb39532eadae7f368d10cdba03ad485}{}\index{main.\+cpp@{main.\+cpp}!Prompt\+For\+Investment@{Prompt\+For\+Investment}}
+\index{Prompt\+For\+Investment@{Prompt\+For\+Investment}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{Prompt\+For\+Investment(invest\+::\+Investment $\ast$investment)}]{\setlength{\rightskip}{0pt plus 5cm}void Prompt\+For\+Investment (
+\begin{DoxyParamCaption}
+\item[{{\bf invest\+::\+Investment} $\ast$}]{investment}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_abcb39532eadae7f368d10cdba03ad485}
+Prompts user for interaction and adds the name and id of the investment they want to add 

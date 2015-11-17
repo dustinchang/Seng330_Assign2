@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>invest_doxygen: /Users/dustin/Documents/Seng330_Assign2/assign2_prototype/assign2_prototype/main.cpp File Reference</title>
+<title>doxygen_proto: /Users/dustin/Documents/Seng330_Assign2/src/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">invest_doxygen
+   <div id="projectname">doxygen_proto
    </div>
   </td>
  </tr>
@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0d1454894de8d3ddd66ffb1f3290448f.html">assign2_prototype</a></li><li class="navelem"><a class="el" href="dir_1a8f21efe0ae206004a4e6fac6188466.html">assign2_prototype</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,21 +93,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="invest_8pb_8h_source.html">invest.pb.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html">Base</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_index.html">Index</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_child1.html">BaseChild1</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stock.html">Stock</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_child2.html">BaseChild2</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mutual_fund.html">MutualFund</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj_factory.html">ObjFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abcb39532eadae7f368d10cdba03ad485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abcb39532eadae7f368d10cdba03ad485">PromptForInvestment</a> (<a class="el" href="classinvest_1_1_investment.html">invest::Investment</a> *investment)</td></tr>
+<tr class="separator:abcb39532eadae7f368d10cdba03ad485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
 <tr class="separator:ac0f2228420376f4db7e1274f2b41667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -134,8 +139,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Main function for execution of creating classes and producing objects from user interaction. There is a <a class="el" href="class_base.html">Base</a> class that acts as a template and two derived classes Stock and MutualFund. </p>
+<p>Main function for execution of creating classes and producing objects from user interaction. There is a <a class="el" href="class_index.html">Index</a> class that acts as a template and two derived classes <a class="el" href="class_stock.html">Stock</a> and <a class="el" href="class_mutual_fund.html">MutualFund</a>. </p>
 <p>Initialization of Objects and variables</p>
+
+</div>
+</div>
+<a class="anchor" id="abcb39532eadae7f368d10cdba03ad485"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PromptForInvestment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classinvest_1_1_investment.html">invest::Investment</a> *&#160;</td>
+          <td class="paramname"><em>investment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prompts user for interaction and adds the name and id of the investment they want to add </p>
 
 </div>
 </div>

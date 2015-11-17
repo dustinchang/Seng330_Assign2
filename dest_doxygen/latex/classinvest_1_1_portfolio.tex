@@ -1,0 +1,326 @@
+\hypertarget{classinvest_1_1_portfolio}{}\section{invest\+:\+:Portfolio Class Reference}
+\label{classinvest_1_1_portfolio}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+
+
+{\ttfamily \#include $<$invest.\+pb.\+h$>$}
+
+Inheritance diagram for invest\+:\+:Portfolio\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classinvest_1_1_portfolio}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinvest_1_1_portfolio_a6ff4b5128705faaa11a3bf3a236215b3}{Portfolio} ()
+\item 
+virtual \hyperlink{classinvest_1_1_portfolio_ac7b450d6dd22ad631e76516105daf380}{$\sim$\+Portfolio} ()
+\item 
+\hyperlink{classinvest_1_1_portfolio_a38c0fbc8ebab336823d61ef8e2456c5c}{Portfolio} (const \hyperlink{classinvest_1_1_portfolio}{Portfolio} \&from)
+\item 
+\hyperlink{classinvest_1_1_portfolio}{Portfolio} \& \hyperlink{classinvest_1_1_portfolio_a2c8f982d1415bb1d10ef6142fdde6fff}{operator=} (const \hyperlink{classinvest_1_1_portfolio}{Portfolio} \&from)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a0b3a4172fafe008b3dc61660c9e38771}{Swap} (\hyperlink{classinvest_1_1_portfolio}{Portfolio} $\ast$other)
+\item 
+\hyperlink{classinvest_1_1_portfolio}{Portfolio} $\ast$ \hyperlink{classinvest_1_1_portfolio_a3dceedee96bb25ecbd0c27f8222303b5}{New} () const 
+\item 
+\hyperlink{classinvest_1_1_portfolio}{Portfolio} $\ast$ \hyperlink{classinvest_1_1_portfolio_accad924b455beffc06ac832336af14ab}{New} (\+::google\+::protobuf\+::\+Arena $\ast$arena) const 
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a78384e7ea96b1e7ea98410ab2142e874}{Copy\+From} (const \+::google\+::protobuf\+::\+Message \&from)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_ab2da7d45e65ae545981fe34ac7e697a9}{Merge\+From} (const \+::google\+::protobuf\+::\+Message \&from)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a67eb937f611dcca7506e51b6dbebbcb3}{Copy\+From} (const \hyperlink{classinvest_1_1_portfolio}{Portfolio} \&from)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a4412811d3de1266d796422811c170227}{Merge\+From} (const \hyperlink{classinvest_1_1_portfolio}{Portfolio} \&from)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_afb1dc52f01faf6e0e922882294b94eea}{Clear} ()
+\item 
+bool \hyperlink{classinvest_1_1_portfolio_a7cbaea62fd1c853523fcdfb7849217f1}{Is\+Initialized} () const 
+\item 
+int \hyperlink{classinvest_1_1_portfolio_a00cc0a12605cecf73bce987336a137d4}{Byte\+Size} () const 
+\item 
+bool \hyperlink{classinvest_1_1_portfolio_a4194574449f60f226593c4a80678ddc7}{Merge\+Partial\+From\+Coded\+Stream} (\+::google\+::protobuf\+::io\+::\+Coded\+Input\+Stream $\ast$input)
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a1cfeffe80fc00b4cc8cc64f6164e5ffc}{Serialize\+With\+Cached\+Sizes} (\+::google\+::protobuf\+::io\+::\+Coded\+Output\+Stream $\ast$output) const 
+\item 
+\+::google\+::protobuf\+::uint8 $\ast$ \hyperlink{classinvest_1_1_portfolio_a6730b4b275bb9903ef9326e72f6d7a33}{Serialize\+With\+Cached\+Sizes\+To\+Array} (\+::google\+::protobuf\+::uint8 $\ast$output) const 
+\item 
+int \hyperlink{classinvest_1_1_portfolio_af4a637c4d2a4b4b968289c36c4797cd5}{Get\+Cached\+Size} () const 
+\item 
+\+::google\+::protobuf\+::\+Metadata \hyperlink{classinvest_1_1_portfolio_ab2cd86320ab4ffe068b252af0247db49}{Get\+Metadata} () const 
+\item 
+int \hyperlink{classinvest_1_1_portfolio_a4815732b49ce9ac8a86ed436af601c4f}{index\+\_\+size} () const 
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a9488e41aa738ca6f2c7300104d05031c}{clear\+\_\+index} ()
+\item 
+const \+::\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} \& \hyperlink{classinvest_1_1_portfolio_a997176b3cd6272bf86026a9bbb897e5a}{index} (int index) const 
+\item 
+\+::\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} $\ast$ \hyperlink{classinvest_1_1_portfolio_a8e006e467318ebff5c8e213822b1e5aa}{mutable\+\_\+index} (int \hyperlink{classinvest_1_1_portfolio_a997176b3cd6272bf86026a9bbb897e5a}{index})
+\item 
+\+::\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} $\ast$ \hyperlink{classinvest_1_1_portfolio_a3f1796c728dc0c3f689d58a49378478f}{add\+\_\+index} ()
+\item 
+\+::google\+::protobuf\+::\+Repeated\+Ptr\+Field$<$ \+::\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} $>$ $\ast$ \hyperlink{classinvest_1_1_portfolio_a6dde370dcb52d6ad53397a888d6e82bb}{mutable\+\_\+index} ()
+\item 
+const \+::google\+::protobuf\+::\+Repeated\+Ptr\+Field$<$ \+::\hyperlink{classinvest_1_1_investment}{invest\+::\+Investment} $>$ \& \hyperlink{classinvest_1_1_portfolio_a182c88491449e6ceb1436b7645c0b00c}{index} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \+::google\+::protobuf\+::\+Descriptor $\ast$ \hyperlink{classinvest_1_1_portfolio_a107f50b80facadb1864e1c72650e1fe7}{descriptor} ()
+\item 
+static const \hyperlink{classinvest_1_1_portfolio}{Portfolio} \& \hyperlink{classinvest_1_1_portfolio_a30042f9f88fa57e49291ac1389771259}{default\+\_\+instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classinvest_1_1_portfolio_ac70257eca9bdfd85f7a37b33eb8a8a24}{k\+Index\+Field\+Number} = 1
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a3ea8dbc072102205d2507d6dcf34b72a}{protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto} ()
+\item 
+void \hyperlink{classinvest_1_1_portfolio_adff030909acda53f62c6ee6efd55ee12}{protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto} ()
+\item 
+void \hyperlink{classinvest_1_1_portfolio_a3819f54b1f4f0be84eae1b5f67660c0b}{protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classinvest_1_1_portfolio_a6ff4b5128705faaa11a3bf3a236215b3}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Portfolio@{Portfolio}}
+\index{Portfolio@{Portfolio}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Portfolio()}]{\setlength{\rightskip}{0pt plus 5cm}invest\+::\+Portfolio\+::\+Portfolio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a6ff4b5128705faaa11a3bf3a236215b3}
+\hypertarget{classinvest_1_1_portfolio_ac7b450d6dd22ad631e76516105daf380}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!````~Portfolio@{$\sim$\+Portfolio}}
+\index{````~Portfolio@{$\sim$\+Portfolio}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{$\sim$\+Portfolio()}]{\setlength{\rightskip}{0pt plus 5cm}invest\+::\+Portfolio\+::$\sim$\+Portfolio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classinvest_1_1_portfolio_ac7b450d6dd22ad631e76516105daf380}
+\hypertarget{classinvest_1_1_portfolio_a38c0fbc8ebab336823d61ef8e2456c5c}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Portfolio@{Portfolio}}
+\index{Portfolio@{Portfolio}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Portfolio(const Portfolio \&from)}]{\setlength{\rightskip}{0pt plus 5cm}invest\+::\+Portfolio\+::\+Portfolio (
+\begin{DoxyParamCaption}
+\item[{const {\bf Portfolio} \&}]{from}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a38c0fbc8ebab336823d61ef8e2456c5c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classinvest_1_1_portfolio_a3f1796c728dc0c3f689d58a49378478f}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!add\+\_\+index@{add\+\_\+index}}
+\index{add\+\_\+index@{add\+\_\+index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{add\+\_\+index()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf invest\+::\+Investment} $\ast$ invest\+::\+Portfolio\+::add\+\_\+index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a3f1796c728dc0c3f689d58a49378478f}
+\hypertarget{classinvest_1_1_portfolio_a00cc0a12605cecf73bce987336a137d4}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Byte\+Size@{Byte\+Size}}
+\index{Byte\+Size@{Byte\+Size}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Byte\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int invest\+::\+Portfolio\+::\+Byte\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_a00cc0a12605cecf73bce987336a137d4}
+\hypertarget{classinvest_1_1_portfolio_afb1dc52f01faf6e0e922882294b94eea}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Clear@{Clear}}
+\index{Clear@{Clear}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Clear()}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_afb1dc52f01faf6e0e922882294b94eea}
+\hypertarget{classinvest_1_1_portfolio_a9488e41aa738ca6f2c7300104d05031c}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!clear\+\_\+index@{clear\+\_\+index}}
+\index{clear\+\_\+index@{clear\+\_\+index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{clear\+\_\+index()}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::clear\+\_\+index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a9488e41aa738ca6f2c7300104d05031c}
+\hypertarget{classinvest_1_1_portfolio_a78384e7ea96b1e7ea98410ab2142e874}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Copy\+From@{Copy\+From}}
+\index{Copy\+From@{Copy\+From}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Copy\+From(const \+::google\+::protobuf\+::\+Message \&from)}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Copy\+From (
+\begin{DoxyParamCaption}
+\item[{const \+::google\+::protobuf\+::\+Message \&}]{from}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a78384e7ea96b1e7ea98410ab2142e874}
+\hypertarget{classinvest_1_1_portfolio_a67eb937f611dcca7506e51b6dbebbcb3}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Copy\+From@{Copy\+From}}
+\index{Copy\+From@{Copy\+From}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Copy\+From(const Portfolio \&from)}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Copy\+From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Portfolio} \&}]{from}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a67eb937f611dcca7506e51b6dbebbcb3}
+\hypertarget{classinvest_1_1_portfolio_a30042f9f88fa57e49291ac1389771259}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!default\+\_\+instance@{default\+\_\+instance}}
+\index{default\+\_\+instance@{default\+\_\+instance}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{default\+\_\+instance()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Portfolio} \& invest\+::\+Portfolio\+::default\+\_\+instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classinvest_1_1_portfolio_a30042f9f88fa57e49291ac1389771259}
+\hypertarget{classinvest_1_1_portfolio_a107f50b80facadb1864e1c72650e1fe7}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!descriptor@{descriptor}}
+\index{descriptor@{descriptor}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{descriptor()}]{\setlength{\rightskip}{0pt plus 5cm}const \+::google\+::protobuf\+::\+Descriptor $\ast$ invest\+::\+Portfolio\+::descriptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classinvest_1_1_portfolio_a107f50b80facadb1864e1c72650e1fe7}
+\hypertarget{classinvest_1_1_portfolio_af4a637c4d2a4b4b968289c36c4797cd5}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Get\+Cached\+Size@{Get\+Cached\+Size}}
+\index{Get\+Cached\+Size@{Get\+Cached\+Size}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Get\+Cached\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int invest\+::\+Portfolio\+::\+Get\+Cached\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_af4a637c4d2a4b4b968289c36c4797cd5}
+\hypertarget{classinvest_1_1_portfolio_ab2cd86320ab4ffe068b252af0247db49}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Get\+Metadata@{Get\+Metadata}}
+\index{Get\+Metadata@{Get\+Metadata}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Get\+Metadata() const }]{\setlength{\rightskip}{0pt plus 5cm}google\+::protobuf\+::\+Metadata invest\+::\+Portfolio\+::\+Get\+Metadata (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_ab2cd86320ab4ffe068b252af0247db49}
+\hypertarget{classinvest_1_1_portfolio_a997176b3cd6272bf86026a9bbb897e5a}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!index@{index}}
+\index{index@{index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{index(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}const \+::{\bf invest\+::\+Investment} \& invest\+::\+Portfolio\+::index (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a997176b3cd6272bf86026a9bbb897e5a}
+\hypertarget{classinvest_1_1_portfolio_a182c88491449e6ceb1436b7645c0b00c}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!index@{index}}
+\index{index@{index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{index() const }]{\setlength{\rightskip}{0pt plus 5cm}const \+::google\+::protobuf\+::\+Repeated\+Ptr\+Field$<$\+::{\bf invest\+::\+Investment} $>$ \& invest\+::\+Portfolio\+::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a182c88491449e6ceb1436b7645c0b00c}
+\hypertarget{classinvest_1_1_portfolio_a4815732b49ce9ac8a86ed436af601c4f}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!index\+\_\+size@{index\+\_\+size}}
+\index{index\+\_\+size@{index\+\_\+size}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{index\+\_\+size() const }]{\setlength{\rightskip}{0pt plus 5cm}int invest\+::\+Portfolio\+::index\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a4815732b49ce9ac8a86ed436af601c4f}
+\hypertarget{classinvest_1_1_portfolio_a7cbaea62fd1c853523fcdfb7849217f1}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Is\+Initialized@{Is\+Initialized}}
+\index{Is\+Initialized@{Is\+Initialized}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Is\+Initialized() const }]{\setlength{\rightskip}{0pt plus 5cm}bool invest\+::\+Portfolio\+::\+Is\+Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_a7cbaea62fd1c853523fcdfb7849217f1}
+\hypertarget{classinvest_1_1_portfolio_ab2da7d45e65ae545981fe34ac7e697a9}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Merge\+From@{Merge\+From}}
+\index{Merge\+From@{Merge\+From}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Merge\+From(const \+::google\+::protobuf\+::\+Message \&from)}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Merge\+From (
+\begin{DoxyParamCaption}
+\item[{const \+::google\+::protobuf\+::\+Message \&}]{from}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_ab2da7d45e65ae545981fe34ac7e697a9}
+\hypertarget{classinvest_1_1_portfolio_a4412811d3de1266d796422811c170227}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Merge\+From@{Merge\+From}}
+\index{Merge\+From@{Merge\+From}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Merge\+From(const Portfolio \&from)}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Merge\+From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Portfolio} \&}]{from}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a4412811d3de1266d796422811c170227}
+\hypertarget{classinvest_1_1_portfolio_a4194574449f60f226593c4a80678ddc7}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Merge\+Partial\+From\+Coded\+Stream@{Merge\+Partial\+From\+Coded\+Stream}}
+\index{Merge\+Partial\+From\+Coded\+Stream@{Merge\+Partial\+From\+Coded\+Stream}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Merge\+Partial\+From\+Coded\+Stream(\+::google\+::protobuf\+::io\+::\+Coded\+Input\+Stream $\ast$input)}]{\setlength{\rightskip}{0pt plus 5cm}bool invest\+::\+Portfolio\+::\+Merge\+Partial\+From\+Coded\+Stream (
+\begin{DoxyParamCaption}
+\item[{\+::google\+::protobuf\+::io\+::\+Coded\+Input\+Stream $\ast$}]{input}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a4194574449f60f226593c4a80678ddc7}
+\hypertarget{classinvest_1_1_portfolio_a8e006e467318ebff5c8e213822b1e5aa}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!mutable\+\_\+index@{mutable\+\_\+index}}
+\index{mutable\+\_\+index@{mutable\+\_\+index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{mutable\+\_\+index(int index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf invest\+::\+Investment} $\ast$ invest\+::\+Portfolio\+::mutable\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a8e006e467318ebff5c8e213822b1e5aa}
+\hypertarget{classinvest_1_1_portfolio_a6dde370dcb52d6ad53397a888d6e82bb}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!mutable\+\_\+index@{mutable\+\_\+index}}
+\index{mutable\+\_\+index@{mutable\+\_\+index}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{mutable\+\_\+index()}]{\setlength{\rightskip}{0pt plus 5cm}google\+::protobuf\+::\+Repeated\+Ptr\+Field$<$\+::{\bf invest\+::\+Investment} $>$ $\ast$ invest\+::\+Portfolio\+::mutable\+\_\+index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a6dde370dcb52d6ad53397a888d6e82bb}
+\hypertarget{classinvest_1_1_portfolio_a3dceedee96bb25ecbd0c27f8222303b5}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!New@{New}}
+\index{New@{New}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{New() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Portfolio}$\ast$ invest\+::\+Portfolio\+::\+New (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a3dceedee96bb25ecbd0c27f8222303b5}
+\hypertarget{classinvest_1_1_portfolio_accad924b455beffc06ac832336af14ab}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!New@{New}}
+\index{New@{New}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{New(\+::google\+::protobuf\+::\+Arena $\ast$arena) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Portfolio} $\ast$ invest\+::\+Portfolio\+::\+New (
+\begin{DoxyParamCaption}
+\item[{\+::google\+::protobuf\+::\+Arena $\ast$}]{arena}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_accad924b455beffc06ac832336af14ab}
+\hypertarget{classinvest_1_1_portfolio_a2c8f982d1415bb1d10ef6142fdde6fff}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!operator=@{operator=}}
+\index{operator=@{operator=}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{operator=(const Portfolio \&from)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Portfolio}\& invest\+::\+Portfolio\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Portfolio} \&}]{from}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classinvest_1_1_portfolio_a2c8f982d1415bb1d10ef6142fdde6fff}
+\hypertarget{classinvest_1_1_portfolio_a1cfeffe80fc00b4cc8cc64f6164e5ffc}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Serialize\+With\+Cached\+Sizes@{Serialize\+With\+Cached\+Sizes}}
+\index{Serialize\+With\+Cached\+Sizes@{Serialize\+With\+Cached\+Sizes}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Serialize\+With\+Cached\+Sizes(\+::google\+::protobuf\+::io\+::\+Coded\+Output\+Stream $\ast$output) const }]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Serialize\+With\+Cached\+Sizes (
+\begin{DoxyParamCaption}
+\item[{\+::google\+::protobuf\+::io\+::\+Coded\+Output\+Stream $\ast$}]{output}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_a1cfeffe80fc00b4cc8cc64f6164e5ffc}
+\hypertarget{classinvest_1_1_portfolio_a6730b4b275bb9903ef9326e72f6d7a33}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Serialize\+With\+Cached\+Sizes\+To\+Array@{Serialize\+With\+Cached\+Sizes\+To\+Array}}
+\index{Serialize\+With\+Cached\+Sizes\+To\+Array@{Serialize\+With\+Cached\+Sizes\+To\+Array}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Serialize\+With\+Cached\+Sizes\+To\+Array(\+::google\+::protobuf\+::uint8 $\ast$output) const }]{\setlength{\rightskip}{0pt plus 5cm}google\+::protobuf\+::uint8 $\ast$ invest\+::\+Portfolio\+::\+Serialize\+With\+Cached\+Sizes\+To\+Array (
+\begin{DoxyParamCaption}
+\item[{\+::google\+::protobuf\+::uint8 $\ast$}]{output}
+\end{DoxyParamCaption}
+) const}\label{classinvest_1_1_portfolio_a6730b4b275bb9903ef9326e72f6d7a33}
+\hypertarget{classinvest_1_1_portfolio_a0b3a4172fafe008b3dc61660c9e38771}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!Swap@{Swap}}
+\index{Swap@{Swap}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{Swap(\+Portfolio $\ast$other)}]{\setlength{\rightskip}{0pt plus 5cm}void invest\+::\+Portfolio\+::\+Swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Portfolio} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}\label{classinvest_1_1_portfolio_a0b3a4172fafe008b3dc61660c9e38771}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classinvest_1_1_portfolio_a3ea8dbc072102205d2507d6dcf34b72a}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto}}
+\index{protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto}]{\setlength{\rightskip}{0pt plus 5cm}void protobuf\+\_\+\+Add\+Desc\+\_\+invest\+\_\+2eproto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classinvest_1_1_portfolio_a3ea8dbc072102205d2507d6dcf34b72a}
+\hypertarget{classinvest_1_1_portfolio_adff030909acda53f62c6ee6efd55ee12}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto}}
+\index{protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto}]{\setlength{\rightskip}{0pt plus 5cm}void protobuf\+\_\+\+Assign\+Desc\+\_\+invest\+\_\+2eproto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classinvest_1_1_portfolio_adff030909acda53f62c6ee6efd55ee12}
+\hypertarget{classinvest_1_1_portfolio_a3819f54b1f4f0be84eae1b5f67660c0b}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto}}
+\index{protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto@{protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto}]{\setlength{\rightskip}{0pt plus 5cm}void protobuf\+\_\+\+Shutdown\+File\+\_\+invest\+\_\+2eproto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classinvest_1_1_portfolio_a3819f54b1f4f0be84eae1b5f67660c0b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classinvest_1_1_portfolio_ac70257eca9bdfd85f7a37b33eb8a8a24}{}\index{invest\+::\+Portfolio@{invest\+::\+Portfolio}!k\+Index\+Field\+Number@{k\+Index\+Field\+Number}}
+\index{k\+Index\+Field\+Number@{k\+Index\+Field\+Number}!invest\+::\+Portfolio@{invest\+::\+Portfolio}}
+\subsubsection[{k\+Index\+Field\+Number}]{\setlength{\rightskip}{0pt plus 5cm}const int invest\+::\+Portfolio\+::k\+Index\+Field\+Number = 1\hspace{0.3cm}{\ttfamily [static]}}\label{classinvest_1_1_portfolio_ac70257eca9bdfd85f7a37b33eb8a8a24}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/src/\hyperlink{invest_8pb_8h}{invest.\+pb.\+h}\item 
+/\+Users/dustin/\+Documents/\+Seng330\+\_\+\+Assign2/src/\hyperlink{invest_8pb_8cc}{invest.\+pb.\+cc}\end{DoxyCompactItemize}
