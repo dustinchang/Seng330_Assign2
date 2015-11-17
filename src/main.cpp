@@ -188,7 +188,6 @@ int main(int argc, const char * argv[]) {
 
     //return 0;
 
-    
 
 
     /*!
@@ -196,32 +195,37 @@ int main(int argc, const char * argv[]) {
      */
     ObjFactory::init();
     Index* obj;
+    Index* obj2;
     string s;
 
-    cout << "Enter object you want to (Stock || MutualFund)\n";
+    cout << "Enter object you want to (Stock || MutualFund || Anything else to end)\n";
     cin >> s;
 
     //Eventually create a func for this if-else
     if (s=="Stock") {
         obj = ObjFactory::getNameVal1();
         cout << obj->getIname() << endl;
+        cout << obj->get_ID() << endl;
     } else if (s=="MutualFund") {
-        obj = ObjFactory::getNameVal2();
-        cout << obj->getIname() << endl;
+        obj2 = ObjFactory::getNameVal2();
+        cout << obj2->getIname() << endl;
+        cout << obj2->get_ID() << endl;
     }
 
     //
     //Loop for prompting user for a string for the type and the instance name
     //
     while (s == "Stock" || s == "MutualFund") {
-        cout << "Enter class you want to build (Stock, MutualFund)\n";
+        cout << "Enter class you want to build (Stock || MutualFund || Anything else to end)\n";
         cin >> s;
         if (s=="Stock") {
             obj = ObjFactory::getNameVal1();
             cout << obj->getIname() << endl;
+            cout << obj->get_ID() << endl;
         } else if (s=="MutualFund") {
-            obj = ObjFactory::getNameVal2();
-            cout << obj->getIname() << endl;
+            obj2 = ObjFactory::getNameVal2();
+            cout << obj2->getIname() << endl;
+            cout << obj2->get_ID() << endl;
         } else {
             break;
         }
@@ -229,6 +233,7 @@ int main(int argc, const char * argv[]) {
     
     //Reason for no destructor before was overwriting each time, which could memory leak, FIX
     delete obj;
+    delete obj2;
     cout << "END~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
     return 0;
 }
