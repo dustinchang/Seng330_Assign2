@@ -15,82 +15,89 @@ using namespace std;
 
 
 /*!
- * This is the Base Prototype class that will be the template for other classes
+ * This is the Index Prototype class that will be the template for other classes
  */
-class Base {
+class Index {
     protected:
         /*!
-         * Protected string cname
+         * Protected string iname
          */
-        string cname;
+        string iname;
+        int id;
     public:
         /*!
          * Template for clone
          */
-        virtual Base* clone() = 0;
+        virtual Index* clone() = 0;
         /*!
-         * Getter method for cname
+         * Getter method for iname
          */
-        string getCName() {
-            return cname;
+        string getIname() {
+            return iname;
+        }
+        /*!
+         * Getter method for id
+         */
+        int get_ID() {
+            return id;
         }
         /*!
          * Virtual Destructor function for Prototype Template
          */
-         virtual ~Base() {
-           cout << "Base destructor called\n";
+         virtual ~Index() {
+           cout << "Index destructor called\n";
          }
 };
 
 /*!
  * This is the Stock Prototype class that will be the template to be cloned for a stock
  */
-class BaseChild1 : public Base {
+class IndexChild1 : public Index {
     public:
         /*!
-         * Constructor for BaseChild1 with string value
+         * Constructor for IndexChild1 with string value
          */
-        BaseChild1(string str) {
-            cname = str;
+        IndexChild1(string str) {
+            iname = str;
         }
         /*!
-         * Clone function for BaseChild1
+         * Clone function for IndexChild1
          */
-        Base* clone() {
-            cout << "in BaseChild1 clone\n";
-            return new BaseChild1(*this);
+        Index* clone() {
+            cout << "in IndexChild1 clone\n";
+            return new IndexChild1(*this);
         }
         /*!
-         * Destructor function for BaseChild1
+         * Destructor function for IndexChild1
          */
-        ~BaseChild1() {
-            cout << "In the BaseChild1 ~Destructor\n";
+        ~IndexChild1() {
+            cout << "In the IndexChild1 ~Destructor\n";
         }
 };
 
 /*!
  * This is the MutualFund Prototype class that will be the template to be cloned for a MutualFund
  */
-class BaseChild2 : public Base {
+class IndexChild2 : public Index {
     public:
         /*!
-         * Constructor for BaseChild2 with string value
+         * Constructor for IndexChild2 with string value
          */
-        BaseChild2(string str) {
-            cname = str;
+        IndexChild2(string str) {
+            iname = str;
         }
         /*!
-         * Clone function for BaseChild2
+         * Clone function for IndexChild2
          */
-        Base* clone() {
-            cout << "in BaseChild2 clone\n";
-            return new BaseChild2(*this);
+        Index* clone() {
+            cout << "in IndexChild2 clone\n";
+            return new IndexChild2(*this);
         }
         /*!
-         * Destructor function for BaseChild2
+         * Destructor function for IndexChild2
          */
-        ~BaseChild2() {
-            cout << "In the BaseChild2 ~Destructor\n";
+        ~IndexChild2() {
+            cout << "In the IndexChild2 ~Destructor\n";
         }
 };
 
@@ -99,30 +106,33 @@ class ObjFactory {
     /*!
      * Static prototype template classes
      */
-    static Base* child1;
-    static Base* child2;
+    static Index* child1;
+    static Index* child2;
     public:
         /*!
          * Initialization function of derived classes
          */
         static void init() {
-            child1 = new BaseChild1("BaseChild1");
-            child2 = new BaseChild2("BaseChild2");
+            child1 = new IndexChild1("IndexChild1");
+            child2 = new IndexChild2("IndexChild2");
         }
         /*!
          * Function to clone derived class 1
          */
-        static Base* getNameVal1() {
+        static Index* getNameVal1() {
             return child1->clone();
         }
         /*!
          * Function to clone derived class 2
          */
-        static Base* getNameVal2() {
+        static Index* getNameVal2() {
             return child2->clone();
         }
 };
 
+/*!
+ * Prompts user for interaction and adds the name and id of the investment they want to add
+ */
 void PromptForInvestment(invest::Investment* investment) {
     cout << "Enter investment ID number: ";
     int id;
@@ -134,12 +144,12 @@ void PromptForInvestment(invest::Investment* investment) {
     getline(cin, *investment->mutable_iname());
 }
 
-Base* ObjFactory::child1 = 0;
-Base* ObjFactory::child2 = 0;
+Index* ObjFactory::child1 = 0;
+Index* ObjFactory::child2 = 0;
 
 /*!
  * Main function for execution of creating classes and producing objects from user interaction.
- * There is a Base class that acts as a template and two derived classes Stock and MutualFund.
+ * There is a Index class that acts as a template and two derived classes Stock and MutualFund.
  */
 int main(int argc, const char * argv[]) {
     GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -176,7 +186,7 @@ int main(int argc, const char * argv[]) {
     // Optional:  Delete all global objects allocated by libprotobuf.
     google::protobuf::ShutdownProtobufLibrary();
 
-    return 0;
+    //return 0;
 
     
 
@@ -185,33 +195,33 @@ int main(int argc, const char * argv[]) {
      * Initialization of Objects and variables
      */
     ObjFactory::init();
-    Base* obj;
+    Index* obj;
     string s;
 
-    cout << "Enter object you want to (BaseChild1 || BaseChild2)\n";
+    cout << "Enter object you want to (IndexChild1 || IndexChild2)\n";
     cin >> s;
 
     //Eventually create a func for this if-else
-    if (s=="BaseChild1") {
+    if (s=="IndexChild1") {
         obj = ObjFactory::getNameVal1();
-        cout << obj->getCName() << endl;
-    } else if (s=="BaseChild2") {
+        cout << obj->getIname() << endl;
+    } else if (s=="IndexChild2") {
         obj = ObjFactory::getNameVal2();
-        cout << obj->getCName() << endl;
+        cout << obj->getIname() << endl;
     }
 
     //
     //Loop for prompting user for a string for the type and the instance name
     //
-    while (s == "BaseChild1" || s == "BaseChild2") {
-        cout << "Enter class you want to build (Basechild1, BaseChild2)\n";
+    while (s == "IndexChild1" || s == "IndexChild2") {
+        cout << "Enter class you want to build (Indexchild1, IndexChild2)\n";
         cin >> s;
-        if (s=="BaseChild1") {
+        if (s=="IndexChild1") {
             obj = ObjFactory::getNameVal1();
-            cout << obj->getCName() << endl;
-        } else if (s=="BaseChild2") {
+            cout << obj->getIname() << endl;
+        } else if (s=="IndexChild2") {
             obj = ObjFactory::getNameVal2();
-            cout << obj->getCName() << endl;
+            cout << obj->getIname() << endl;
         } else {
             break;
         }
