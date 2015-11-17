@@ -1,11 +1,13 @@
+syntax = "proto3";
+
 package invest;
 
 message Investment {
-  optional string sname = 1;
-  optional int32 id = 2; //Unique ID for investment
+  string iname = 1;
+  int32 id = 2; //Unique ID for investment
 }
 
 //Portfolio for stock or funds
 message Portfolio {
-  optional string fname = 1;
+  repeated Investment index = 1;
 }
