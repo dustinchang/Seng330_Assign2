@@ -52,52 +52,52 @@ class Index {
 /*!
  * This is the Stock Prototype class that will be the template to be cloned for a stock
  */
-class IndexChild1 : public Index {
+class Stock : public Index {
     public:
         /*!
-         * Constructor for IndexChild1 with string value
+         * Constructor for Stock with string value
          */
-        IndexChild1(string str) {
+        Stock(string str) {
             iname = str;
         }
         /*!
-         * Clone function for IndexChild1
+         * Clone function for Stock
          */
         Index* clone() {
-            cout << "in IndexChild1 clone\n";
-            return new IndexChild1(*this);
+            cout << "in Stock clone\n";
+            return new Stock(*this);
         }
         /*!
-         * Destructor function for IndexChild1
+         * Destructor function for Stock
          */
-        ~IndexChild1() {
-            cout << "In the IndexChild1 ~Destructor\n";
+        ~Stock() {
+            cout << "In the Stock ~Destructor\n";
         }
 };
 
 /*!
  * This is the MutualFund Prototype class that will be the template to be cloned for a MutualFund
  */
-class IndexChild2 : public Index {
+class MutualFund : public Index {
     public:
         /*!
-         * Constructor for IndexChild2 with string value
+         * Constructor for MutualFund with string value
          */
-        IndexChild2(string str) {
+        MutualFund(string str) {
             iname = str;
         }
         /*!
-         * Clone function for IndexChild2
+         * Clone function for MutualFund
          */
         Index* clone() {
-            cout << "in IndexChild2 clone\n";
-            return new IndexChild2(*this);
+            cout << "in MutualFund clone\n";
+            return new MutualFund(*this);
         }
         /*!
-         * Destructor function for IndexChild2
+         * Destructor function for MutualFund
          */
-        ~IndexChild2() {
-            cout << "In the IndexChild2 ~Destructor\n";
+        ~MutualFund() {
+            cout << "In the MutualFund ~Destructor\n";
         }
 };
 
@@ -113,8 +113,8 @@ class ObjFactory {
          * Initialization function of derived classes
          */
         static void init() {
-            child1 = new IndexChild1("IndexChild1");
-            child2 = new IndexChild2("IndexChild2");
+            child1 = new Stock("Stock");
+            child2 = new MutualFund("MutualFund");
         }
         /*!
          * Function to clone derived class 1
@@ -198,14 +198,14 @@ int main(int argc, const char * argv[]) {
     Index* obj;
     string s;
 
-    cout << "Enter object you want to (IndexChild1 || IndexChild2)\n";
+    cout << "Enter object you want to (Stock || MutualFund)\n";
     cin >> s;
 
     //Eventually create a func for this if-else
-    if (s=="IndexChild1") {
+    if (s=="Stock") {
         obj = ObjFactory::getNameVal1();
         cout << obj->getIname() << endl;
-    } else if (s=="IndexChild2") {
+    } else if (s=="MutualFund") {
         obj = ObjFactory::getNameVal2();
         cout << obj->getIname() << endl;
     }
@@ -213,13 +213,13 @@ int main(int argc, const char * argv[]) {
     //
     //Loop for prompting user for a string for the type and the instance name
     //
-    while (s == "IndexChild1" || s == "IndexChild2") {
-        cout << "Enter class you want to build (Indexchild1, IndexChild2)\n";
+    while (s == "Stock" || s == "MutualFund") {
+        cout << "Enter class you want to build (Stock, MutualFund)\n";
         cin >> s;
-        if (s=="IndexChild1") {
+        if (s=="Stock") {
             obj = ObjFactory::getNameVal1();
             cout << obj->getIname() << endl;
-        } else if (s=="IndexChild2") {
+        } else if (s=="MutualFund") {
             obj = ObjFactory::getNameVal2();
             cout << obj->getIname() << endl;
         } else {
