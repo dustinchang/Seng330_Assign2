@@ -123,6 +123,17 @@ class ObjFactory {
         }
 };
 
+void PromptForInvestment(invest::Investment* investment) {
+    cout << "Enter investment ID number: ";
+    int id;
+    cin >> id;
+    investment->set_id(id);
+    cin.ignore(256, '\n');
+
+    cout << "Enter type of investment: ";
+    getline(cin, *investment->mutable_iname());
+}
+
 Base* ObjFactory::child1 = 0;
 Base* ObjFactory::child2 = 0;
 
@@ -131,11 +142,44 @@ Base* ObjFactory::child2 = 0;
  * There is a Base class that acts as a template and two derived classes Stock and MutualFund.
  */
 int main(int argc, const char * argv[]) {
-    //GOOGLE_PROTOBUF_VERIFY_VERSION;
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-    //invest::Invest investing;
+    if (argc != 2) {
+        cerr << "Usage:  " << argv[0] << " INVESTMENT_FILE" << endl;
+        return -1;
+    }
+    
+    invest::Portfolio investing_portfolio;
+    
+    {
+        // Read the existing portfolio
+        fstream input(argv[1], ios::in | ios::binary);
+        if (!input) {
+            cout << argv[1] << ": File not found.  Creating a new file." << endl;
+        } else if (!investing_portfolio.ParseFromIstream(&input)) {
+            cerr << "Failed to parse address book." << endl;
+            return -1;
+        }
+    }
 
-    //investing.ParseFromIstream();
+    PromptForInvestment(investing_portfolio.add_index());
+
+    {
+      // Write the new portfolio
+      fstream output(argv[1], ios::out | ios::trunc | ios::binary);
+      if (!investing_portfolio.SerializeToOstream(&output)) {
+        cerr << "Failed to write portfolio." << endl;
+        return -1;
+      }
+    }
+
+    // Optional:  Delete all global objects allocated by libprotobuf.
+    google::protobuf::ShutdownProtobufLibrary();
+
+    return 0;
+
+    
+
 
     /*!
      * Initialization of Objects and variables
